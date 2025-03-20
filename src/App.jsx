@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Amplify } from "aws-amplify";
-import { Storage, Auth } from "aws-amplify";
+import { Amplify, Storage } from "aws-amplify";
 import awsExports from "./aws-exports";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 
@@ -18,21 +17,17 @@ function App() {
     if (!file) return;
 
     try {
-        const response = await fetch(`https://YOUR_API_GATEWAY_URL?fileName=${file.name}`);
-        const { uploadURL } = await response.json();
+      await Storage.put(file.name, file, {
+        contentType: file.type,  // Ensure correct file type
+        level: "private",        // "public" for global access
+      });
 
-        await fetch(uploadURL, {
-            method: "PUT",
-            body: file,
-            headers: { "Content-Type": file.type },
-        });
-
-        setMessage("File uploaded successfully!");
+      setMessage("File uploaded successfully!");
     } catch (error) {
-        console.error(error);
-        setMessage("Upload failed.");
+      console.error(error);
+      setMessage("Upload failed.");
     }
-};
+  };
 
   return (
     <div>

@@ -1,7 +1,7 @@
 {
-  "resourceName": "filesyncing",
-  "policyUUID": "90dfc87a",
-  "bucketName": "filebucket",
+  "resourceName": "s33310a608",
+  "policyUUID": "3310a608",
+  "bucketName": "dropboxbucket",
   "storageAccess": "auth",
   "guestAccess": [],
   "authAccess": [
@@ -9,6 +9,6 @@
     "READ",
     "DELETE"
   ],
-  "triggerFunction": "NONE",
+  "triggerFunction": "S3Trigger10fd07e9",
   "groupAccess": {}
 }

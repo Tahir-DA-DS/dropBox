@@ -1,6 +1,22 @@
 {
+  "api": {
+    "apie986cbc3": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "S3Trigger10fd07e9"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
-    "mydropboxce1832f6": {
+    "dropbox669ebf67": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -28,33 +44,65 @@
     }
   },
   "function": {
-    "mydropboxe759c4d2": {
+    "S3Trigger10fd07e9": {
       "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "dropboxLambda": {
+      "build": true,
+      "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_mydropboxe759c4d2_deploymentBucketName": {
+    "AMPLIFY_function_S3Trigger10fd07e9_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "mydropboxe759c4d2"
+          "resourceName": "S3Trigger10fd07e9"
         }
       ]
     },
-    "AMPLIFY_function_mydropboxe759c4d2_s3Key": {
+    "AMPLIFY_function_S3Trigger10fd07e9_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "mydropboxe759c4d2"
+          "resourceName": "S3Trigger10fd07e9"
+        }
+      ]
+    },
+    "AMPLIFY_function_dropboxLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "dropboxLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_dropboxLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "dropboxLambda"
         }
       ]
     }
   },
   "storage": {
-    "filesyncing": {
-      "dependsOn": [],
+    "s33310a608": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "S3Trigger10fd07e9"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "S3"
     }

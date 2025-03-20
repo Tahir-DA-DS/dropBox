@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "mydropboxe759c4d2",
+            "dropboxLambda",
             {
               "Fn::Join": [
                 "",
                 [
-                  "mydropboxe759c4d2",
+                  "dropboxLambda",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "mydropboxLambdaRolea2a4a3aa",
+            "dropboxLambdaRole250c9e78",
             {
               "Fn::Join": [
                 "",
                 [
-                  "mydropboxLambdaRolea2a4a3aa",
+                  "dropboxLambdaRole250c9e78",
                   "-",
                   {
                     "Ref": "env"

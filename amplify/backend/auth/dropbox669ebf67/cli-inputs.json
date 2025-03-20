@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "mydropboxce1832f6_identitypool_ce1832f6",
+    "identityPoolName": "dropbox669ebf67_identitypool_669ebf67",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "mydropce1832f6",
-    "userPoolName": "mydropboxce1832f6_userpool_ce1832f6",
+    "resourceNameTruncated": "dropbo669ebf67",
+    "userPoolName": "dropbox669ebf67_userpool_669ebf67",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -31,10 +31,10 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "mydropce1832f6_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "dropbo669ebf67_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "ce1832f6",
-    "resourceName": "mydropboxce1832f6",
+    "sharedId": "669ebf67",
+    "resourceName": "dropbox669ebf67",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "default",
     "usernameAttributes": [
