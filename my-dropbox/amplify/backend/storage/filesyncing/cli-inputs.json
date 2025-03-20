@@ -1,0 +1,14 @@
+{
+  "resourceName": "filesyncing",
+  "policyUUID": "90dfc87a",
+  "bucketName": "filebucket",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
