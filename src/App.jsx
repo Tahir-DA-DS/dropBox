@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Amplify } from "aws-amplify";
-import { Storage} from "aws-amplify";
+import { Amplify, Storage } from "aws-amplify";
 import awsExports from "./aws-exports";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 
